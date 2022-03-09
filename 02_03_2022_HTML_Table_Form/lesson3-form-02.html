@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="stylesheet" href="./lesson3-form-02.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <title>Lesson Form 02</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-header">
+        <h1 class="header1">Client Details</h1>
+        <h3 class="header2">Enter the details of all incoming clients.</h3>
+      </div>
+      <br />
+      <div class="form-body">
+        <form>
+          <table>
+            <tr>
+              <td>Client Name <span>*</span></td>
+              <td colspan="2"><input type="text" /></td>
+            </tr>
+            <tr>
+              <td>Company <span>*</span></td>
+              <td colspan="2"><input type="text" /></td>
+            </tr>
+            <tr>
+              <td>Title</td>
+              <td colspan="2"><input type="text" /></td>
+            </tr>
+            <tr>
+              <td>Department <span>*</span></td>
+              <td colspan="2">
+                <select>
+                  <option disabled="disable" selected="selected">
+                    -Select-
+                  </option>
+                  <option>HR</option>
+                  <option>Administrator</option>
+                  <option>Security</option>
+                  <option>IT Deskhelp</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Preferred contact method <span>*</span></td>
+              <td>
+                <input type="radio" name="contact" id="m-email" value="email" />
+                <label for="m-email">Email</label>
+                <input type="radio" name="contact" id="m-phone" value="phone" />
+                <label for="m-phone">Phone</label>
+              </td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td colspan="2"><input type="email" /></td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td colspan="2"><input type="number" /></td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top">
+                Company address <span>*</span>
+              </td>
+              <td>
+                <tr>
+                  <td colspan="2"><input type="text" /></td>
+                </tr>
+                <tr>
+                  <td><label>Street Address</label></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><input type="text" /></td>
+                </tr>
+                <tr>
+                  <td><label>Address Line 2</label></td>
+                </tr>
+                <tr>
+                  <td><input type="text" /></td>
+                  <td><input type="text" /></td>
+                </tr>
+                <tr>
+                  <td><label>City</label></td>
+                  <td><label>State/Region/Province</label></td>
+                </tr>
+                <tr>
+                  <td><input type="text" /></td>
+                  <td>
+                    <select>
+                      <option disabled="disable" selected="selected">
+                        -Select-
+                      </option>
+                      <option>Vietnam</option>
+                      <option>UK</option>
+                      <option>Singapore</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label>Postal / Zip Code</label></td>
+                  <td><label>Country</label></td>
+                </tr>
+              </td>
+            </tr>
+            <tr>
+              <td>Company website <span>*</span></td>
+              <td><input type="text" /></td>
+            </tr>
+            <tr>
+              <td>Company logo</td>
+              <td><input type="file" /></td>
+            </tr>
+            <tr>
+              <td>Working Hours <span>*</span></td>
+              <td><input type="text" /></td>
+            </tr>
+            <tr>
+              <td>Working Days <span>*</span></td>
+              <td><input type="text" /></td>
+            </tr>
+            <tr>
+              <td>Billing Cycle <span>*</span></td>
+              <td><input type="text" /></td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top">Additional Information</td>
+              <td><textarea cols="30" rows="3"></textarea></td>
+            </tr>
+          </table>
+          <div>
+            <input type="submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

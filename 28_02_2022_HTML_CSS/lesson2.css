@@ -1,0 +1,52 @@
+body {
+  font-family: arial;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+h2 {
+  color: rgb(68, 151, 43);
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: auto;
+}
+
+h3 {
+  color: rgb(84, 84, 84);
+}
+
+p {
+  font-style: italic;
+  color: rgb(196, 196, 196);
+  width: 350px;
+  margin: auto;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.column {
+  text-align: left;
+}
+
+a {
+  font-weight: bolder;
+}
+
+#cl1 {
+  padding-left: 470px;
+}
+
+#cl2 {
+  padding-right: 400px;
+}

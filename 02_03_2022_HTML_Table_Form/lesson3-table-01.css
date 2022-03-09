@@ -1,0 +1,52 @@
+body {
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+caption {
+}
+
+tr {
+}
+
+th,
+td {
+  border-style: dotted;
+  border-width: 1.1px;
+}
+
+th {
+  background-color: blue;
+  color: white;
+  font-weight: 550;
+}
+
+#hovaten-header {
+  column-span: 2;
+}
+
+#diemdanh-header {
+  background-color: rgb(234, 199, 82);
+  color: black;
+}
+
+.stt {
+  text-align: center;
+}
+.hvt {
+}
+
+.link {
+  border-right: solid;
+}
+
+.diemdanh-yes {
+  background-color: rgb(117, 251, 76);
+}

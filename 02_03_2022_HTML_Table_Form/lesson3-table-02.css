@@ -1,0 +1,22 @@
+body {
+  font-family: arial;
+  margin: 100;
+  padding: 100;
+  border: 0;
+  font-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.id {
+  text-align: center;
+}
+
+th,
+td {
+  border-style: solid;
+  border-width: 1px;
+}

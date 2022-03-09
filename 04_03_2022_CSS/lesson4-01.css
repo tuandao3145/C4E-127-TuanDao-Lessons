@@ -1,0 +1,47 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.propose {
+  width: 700px;
+  margin: 20px auto;
+}
+
+.question {
+  background-color: #212121;
+  width: 700px;
+  height: 300px;
+
+  margin: auto;
+  border-radius: 10px;
+
+  line-height: 300px;
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+}
+
+.ans-container {
+}
+
+.ans {
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+  margin: auto;
+
+  line-height: 150px;
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+}
+
+.yes {
+  float: left;
+  background-color: green;
+}
+
+.no {
+  float: right;
+  background-color: red;
+}
