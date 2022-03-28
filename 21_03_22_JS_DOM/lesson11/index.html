@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Lesson 11</title>
+	</head>
+	<body>
+		<div id="ex1" style="display: flex flex-direction: column">
+			<div class="menu">
+				<button onclick="hideImage()">Hide Image</button>
+				<button onclick="changeImage()">Change Image</button>
+				<button onclick="showImage()">Show Image</button>
+				<button onclick="resizeImage()">Resize Image</button>
+			</div>
+
+			<img
+				src="https://i.pinimg.com/originals/6c/2e/07/6c2e07660c6fcf90d6a362ced622e1ad.png"
+				height="200px"
+				width="200px"
+				id="my-photo"
+			/>
+		</div>
+		<div id="ex2">
+			<input type="text" id="input-task" />
+			<button onclick="addTask()">Add task</button>
+			<ol id="task-list">
+				<li>Wake up</li>
+				<li>Brush teeth</li>
+			</ol>
+		</div>
+	</body>
+	<script src="./app.js"></script>
+</html>
