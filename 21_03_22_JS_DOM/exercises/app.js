@@ -563,37 +563,67 @@ const printFullName = (userList) => {
 // printFullName(users);
 
 //ex2
+// const reduceUsersList = (userList) => {
+// 	let copyUsers = [...userList];
+// 	let result = copyUsers.map((user) => {
+// 		user.full_name = user.first_name + " " + user.last_name;
+// 		delete user.first_name;
+// 		delete user.last_name;
+// 		delete user.gender;
+// 		delete user.job;
+// 		delete user.country;
+// 		delete user.is_married;
+// 		return user;
+// 	});
+// 	return result;
+// };
+
+//ex2 fixed
 const reduceUsersList = (userList) => {
 	let result = userList.map((user) => {
-		user.full_name = user.first_name + " " + user.last_name;
-		delete user.first_name;
-		delete user.last_name;
-		delete user.gender;
-		delete user.job;
-		delete user.country;
-		delete user.is_married;
-		return user;
+		let newUser = {
+			id: user.id,
+			fullname: user.first_name + " " + user.last_name,
+			age: user.age,
+			email: user.email,
+		};
+		return newUser;
 	});
 	return result;
 };
+
 // console.log(reduceUsersList(users));
 
 //ex3
+// const enhanceReduce = (userList, requiredList) => {
+// 	// step 1: iterate all user in userList
+// 	let result = userList.map((user) => {
+// 		// step 2: iterate all keys of a user
+// 		Object.keys(user).forEach((key) => {
+// 			// step 3: delete that key if it is not in the requiredList
+// 			requiredList.includes(key) ? "" : delete user[key];
+// 		});
+// 		// remember to return user after run this tranform
+// 		return user;
+// 	});
+// 	return result;
+// };
+
+//ex3 fixed
 const enhanceReduce = (userList, requiredList) => {
-	// step 1: iterate all user in userList
 	let result = userList.map((user) => {
-		// step 2: iterate all keys of a user
-		Object.keys(user).forEach((key) => {
-			// step 3: delete that key if it is not in the requiredList
-			requiredList.includes(key) ? "" : delete user[key];
+		let newUser = {};
+		requiredList.map((key) => {
+			if (user[key] != undefined) {
+				newUser[key] = user[key];
+			}
 		});
-		// remember to return user after run this tranform
-		return user;
+		return newUser;
 	});
 	return result;
 };
 
-// requiredFields = ["first_name", "email", "gender", "age"];
+// requiredFields = ["first_name", "email", "gender"];
 // console.log(enhanceReduce(users, requiredFields));
 
 //ex4
@@ -629,21 +659,38 @@ const findUserByID = (userList, idLimit) => {
 	let result = userList.find((user) => user["id"] === idLimit);
 	return result ? result : null;
 };
+
 // console.log(findUserByID(users, 6));
 
 //ex8
+// const countUserByJob = (userList) => {
+// 	let result = {};
+// 	userList.forEach((user) => {
+// 		// check if that job has been in jobs list or not
+// 		Object.keys(result).includes(user["job"])
+// 			? (result[user["job"]] += 1) // if yes, increase by 1
+// 			: (result[user["job"]] = 1); // if not, create that job
+// 	});
+
+// 	return result;
+// };
+
+//ex8 fixed
 const countUserByJob = (userList) => {
 	let result = {};
-	userList.forEach((user) => {
-		// check if that job has been in jobs list or not
-		Object.keys(result).includes(user["job"])
-			? (result[user["job"]] += 1) // if yes, increase by 1
-			: (result[user["job"]] = 1); // if not, create that job
-	});
+	for (let user of userList) {
+		let job = user["job"];
 
+		if (result[job] != undefined) {
+			result[job] += 1;
+		} else {
+			result[job] = 1;
+		}
+	}
 	return result;
 };
-// console.log(countUserByJob(users));
+
+console.log(countUserByJob(users));
 
 //ex9
 const countByMarried = (userList) => {
@@ -672,4 +719,5 @@ const searchByName = (userList, keyword) => {
 	);
 	return result;
 };
+
 // console.log(searchByName(users, "am"));
