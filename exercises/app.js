@@ -687,10 +687,11 @@ const countUserByJob = (userList) => {
 			result[job] = 1;
 		}
 	}
+
 	return result;
 };
 
-console.log(countUserByJob(users));
+// console.log(countUserByJob(users));
 
 //ex9
 const countByMarried = (userList) => {
@@ -712,12 +713,13 @@ const countByMarried = (userList) => {
 
 //ex10
 const searchByName = (userList, keyword) => {
-	let result = userList.filter(
-		(user) =>
-			user["first_name"].includes(keyword) ||
-			user["last_name"].includes(keyword)
-	);
+	let result = userList.filter((user) => {
+		let full_name = user["first_name"] + "" + user["last_name"];
+		if (full_name.toLocaleLowerCase().includes(keyword.toLowerCase())) {
+			return user;
+		}
+	});
 	return result;
 };
 
-// console.log(searchByName(users, "am"));
+console.log(searchByName(users, "AM"));
